@@ -1,0 +1,101 @@
+/* ul3 스타일 */
+.ul3 {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0;
+  display: flex;
+  align-items: center;
+}
+
+.ul3 li {
+  margin: 0 2px; /* 버튼 간 간격을 줄였습니다 */
+  z-index: 999;
+}
+
+.cheer-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  color: var(--icon-color);
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+}
+
+.cheer-button:hover {
+  color: var(--icon-hover-color);
+}
+
+.cheer-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cheer-button.active {
+  background-color: #28a745;
+  color: #fff;
+}
+
+#time-selector {
+  padding: 4px;
+  font-size: 12px;
+  background-color: var(--select-bg-color);
+  color: var(--select-text-color);
+  border: 1px solid var(--select-border-color);
+  border-radius: 4px;
+}
+
+/* 토스트 메시지 스타일 */
+.cheer-toast {
+  visibility: hidden;
+  min-width: 200px;
+  margin-left: -100px;
+  background-color: var(--toast-bg-color);
+  color: var(--toast-text-color);
+  text-align: center;
+  border-radius: 2px;
+  padding: 8px;
+  position: fixed;
+  z-index: 9999;
+  left: 50%;
+  bottom: 30px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.5s, bottom 0.5s;
+}
+
+.cheer-toast-show {
+  visibility: visible;
+  opacity: 1;
+  bottom: 50px;
+}
+
+/* 기본 색상 변수 */
+:root {
+  --icon-color: #333;
+  --icon-hover-color: #000;
+  --select-bg-color: #fff;
+  --select-text-color: #333;
+  --select-border-color: #ccc;
+  --text-bg-color: #e9e9e9;
+  --text-color: #333;
+  --toast-bg-color: #333;
+  --toast-text-color: #fff;
+}
+
+/* 다크 모드 적용: body에 thema_dark 클래스가 있을 때 */
+body.thema_dark {
+  --icon-color: #ccc;
+  --icon-hover-color: #fff;
+  --select-bg-color: #333;
+  --select-text-color: #fff;
+  --select-border-color: #555;
+  --text-bg-color: #555;
+  --text-color: #fff;
+  --toast-bg-color: #fff;
+  --toast-text-color: #333;
+}
