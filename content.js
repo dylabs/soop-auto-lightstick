@@ -88,19 +88,19 @@ function injectControls() {
     ul3.className = "ul3";
     // ul2 다음에 ul3 추가
     const ul2 = document.querySelector("#ul2");
-    if (ul2 && ul2.parentNode) {
-      ul2.parentNode.insertBefore(ul3, ul2.nextSibling);
-    } else {
-      showToast("#ul2 요소를 찾을 수 없습니다.");
-      return;
-    }
+    // if (ul2 && ul2.parentNode) {
+    //   ul2.parentNode.insertBefore(ul3, ul2.nextSibling);
+    // } else {
+    //   showToast("#ul2 요소를 찾을 수 없습니다.");
+    //   return;
+    // }
   }
 
   // 컨트롤 요소 추가
-  ul3.appendChild(recordLi);
-  ul3.appendChild(startLi);
-  ul3.appendChild(stopLi);
-  ul3.appendChild(timeSelectorLi);
+  ul2.appendChild(recordLi);
+  ul2.appendChild(startLi);
+  ul2.appendChild(stopLi);
+  ul2.appendChild(timeSelectorLi);
 
   // 현재 텍스트 표시 요소 생성
   createRecordedTextDisplay();

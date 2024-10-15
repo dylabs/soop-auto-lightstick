@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "아프리카TV 자동 응원봉 by 도연",
-  "version": "1.0.1",
-  "description": "아프리카TV 채팅에 자동으로 응원 메시지를 보냅니다. 어떤 메시지를 보낼지 커스터마이징도 가능해요!",
+  "name": "SOOP(숲) 자동 응원봉 by 도연",
+  "version": "1.0.2",
+  "description": "SOOP(숲) 채팅에 자동으로 응원 메시지를 보냅니다. 어떤 메시지를 보낼지 커스터마이징도 가능해요!",
   "icons": {
     "16": "icons/icon16.png",
     "32": "icons/icon32.png",
@@ -12,7 +12,10 @@
   "permissions": [],
   "content_scripts": [
     {
-      "matches": ["https://play.afreecatv.com/*"],
+      "matches": [
+        "https://play.afreecatv.com/*",
+        "https://play.sooplive.co.kr/*"
+      ],
       "js": ["content.js"],
       "css": ["styles.css"],
       "run_at": "document_end"
